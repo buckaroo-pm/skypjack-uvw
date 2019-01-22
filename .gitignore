@@ -1,2 +1,9 @@
 *.user
 .conan/test_package/build
+
+.buckd
+buck-out
+.buckconfig.local
+.buckconfig.d
+buckaroo
+buckaroo_macros.bzl

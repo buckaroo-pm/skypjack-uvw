@@ -1,0 +1,17 @@
+manifest = "aeb5017d354259c99a06a78037752cc4fadd763198bd64477f5798be8a5d6562"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/google-googletest"
+target = "//:googletest"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/libuv"
+target = "//:uv"
+
+[lock."github.com/buckaroo-pm/google-googletest"]
+versions = [ "branch=master" ]
+revision = "cb8d2c1a2fcd344953e6c129a1a699a2c230551d"
+
+[lock."github.com/buckaroo-pm/libuv"]
+versions = [ "branch=v1.x" ]
+revision = "fc3570b7a90c0daa9a091f982a75d6b54f83cf19"

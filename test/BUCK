@@ -1,0 +1,21 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps_from_package')
+
+gtest = buckaroo_deps_from_package('github.com/buckaroo-pm/google-googletest')
+
+cxx_test(
+  name = 'test',
+  srcs = glob([
+    '**/*.cpp',
+  ]),
+  compiler_flags = [
+    '-DTARGET_FS_EVENT_DIR="./docs"',
+    '-DTARGET_FS_REQ_DIR="./docs"',
+    '-DTARGET_FILE_REQ_DIR="./docs"',
+    '-DTARGET_FS_POLL_DIR="./docs"',
+    '-DTARGET_PIPE_DIR="./docs"',
+    '-DTARGET_LIB_SO="blah.so"',
+  ],
+  deps = gtest + [
+    '//:uvw',
+  ],
+)
